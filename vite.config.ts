@@ -6,7 +6,7 @@ import { resolve } from 'path';
 export default defineConfig({
     plugins: [svelte()],
 
-    define: {
+    resolve: {
         alias: [
             {
                 find: '$lib',
