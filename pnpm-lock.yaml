@@ -5,6 +5,7 @@ specifiers:
   '@tauri-apps/api': ^1.0.2
   '@tauri-apps/cli': ^1.0.5
   '@tsconfig/svelte': ^3.0.0
+  ghostsui: ^1.4.4
   svelte: ^3.49.0
   svelte-check: ^2.8.0
   svelte-preprocess: ^4.10.7
@@ -19,6 +20,7 @@ devDependencies:
   '@sveltejs/vite-plugin-svelte': 1.0.1_svelte@3.49.0+vite@3.0.4
   '@tauri-apps/cli': 1.0.5
   '@tsconfig/svelte': 3.0.0
+  ghostsui: 1.4.4
   svelte: 3.49.0
   svelte-check: 2.8.0_svelte@3.49.0
   svelte-preprocess: 4.10.7_uslzfc62di2n2otc2tvfklnwji
@@ -563,6 +565,13 @@ packages:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
     dev: true
 
+  /ghostsui/1.4.4:
+    resolution: {integrity: sha512-pCc4YzwnRMt1qpN4L/Ss3JjxKBnxF09yo8+oVXpMx3YvVDgrlC1PhQnIqucUuybcAbBGo7JTpqql1Wuot/0d6g==}
+    dependencies:
+      greset: 2.0.0
+      sass-hex-rgb: 1.0.1
+    dev: true
+
   /glob-parent/5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
     engines: {node: '>= 6'}
@@ -583,6 +592,12 @@ packages:
 
   /graceful-fs/4.2.10:
     resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
+    dev: true
+
+  /greset/2.0.0:
+    resolution: {integrity: sha512-oC3JpE4RUT3iMkkmu5uzWc0H8prJAN3Nv7kcxPlJUtWBQi16UpPm6dxseIeC+KKlevxoSBzuTQeFi71qAjWHxA==}
+    dependencies:
+      rfs: 9.0.6
     dev: true
 
   /has/1.0.3:
@@ -745,6 +760,10 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
+  /postcss-value-parser/4.2.0:
+    resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
+    dev: true
+
   /postcss/8.4.14:
     resolution: {integrity: sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig==}
     engines: {node: ^10 || ^12 || >=14}
@@ -784,6 +803,13 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
+  /rfs/9.0.6:
+    resolution: {integrity: sha512-KQ0EGVP4l3B3ynUZ1UNX3UoRAeswiX+ljGRcT+MoJKXRwXSUFpVZIPsqurH9pmY/AOGBFq7KKBq9fhRCkkg+SQ==}
+    engines: {node: '>=8'}
+    dependencies:
+      postcss-value-parser: 4.2.0
+    dev: true
+
   /rimraf/2.7.1:
     resolution: {integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==}
     hasBin: true
@@ -819,6 +845,10 @@ packages:
       graceful-fs: 4.2.10
       mkdirp: 0.5.6
       rimraf: 2.7.1
+    dev: true
+
+  /sass-hex-rgb/1.0.1:
+    resolution: {integrity: sha512-yxHIGddIE+HPvS86Y2imuu/J4LZmss0K9/Dpos38gAC21ThbZLwE4PeA/2mN3ZLH3gXhHxBtjxf6Oi1GAIrMag==}
     dev: true
 
   /sorcery/0.10.0:
