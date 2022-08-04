@@ -1,6 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@fortawesome/free-regular-svg-icons': ^6.1.2
+  '@fortawesome/free-solid-svg-icons': ^6.1.2
   '@sveltejs/vite-plugin-svelte': ^1.0.1
   '@tauri-apps/api': ^1.0.2
   '@tauri-apps/cli': ^1.0.5
@@ -9,6 +11,7 @@ specifiers:
   sass: ^1.54.3
   svelte: ^3.49.0
   svelte-check: ^2.8.0
+  svelte-fa: ^3.0.3
   svelte-preprocess: ^4.10.7
   tslib: ^2.4.0
   typescript: ^4.7.4
@@ -18,6 +21,8 @@ dependencies:
   '@tauri-apps/api': 1.0.2
 
 devDependencies:
+  '@fortawesome/free-regular-svg-icons': 6.1.2
+  '@fortawesome/free-solid-svg-icons': 6.1.2
   '@sveltejs/vite-plugin-svelte': 1.0.1_svelte@3.49.0+vite@3.0.4
   '@tauri-apps/cli': 1.0.5
   '@tsconfig/svelte': 3.0.0
@@ -25,6 +30,7 @@ devDependencies:
   sass: 1.54.3
   svelte: 3.49.0
   svelte-check: 2.8.0_sass@1.54.3+svelte@3.49.0
+  svelte-fa: 3.0.3
   svelte-preprocess: 4.10.7_p5qsoo3fc2fgoyqptb7gjc3l7u
   tslib: 2.4.0
   typescript: 4.7.4
@@ -40,6 +46,28 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@fortawesome/fontawesome-common-types/6.1.2:
+    resolution: {integrity: sha512-wBaAPGz1Awxg05e0PBRkDRuTsy4B3dpBm+zreTTyd9TH4uUM27cAL4xWyWR0rLJCrRwzVsQ4hF3FvM6rqydKPA==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: true
+
+  /@fortawesome/free-regular-svg-icons/6.1.2:
+    resolution: {integrity: sha512-xR4hA+tAwsaTHGfb+25H1gVU/aJ0Rzu+xIUfnyrhaL13yNQ7TWiI2RvzniAaB+VGHDU2a+Pk96Ve+pkN3/+TTQ==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.1.2
+    dev: true
+
+  /@fortawesome/free-solid-svg-icons/6.1.2:
+    resolution: {integrity: sha512-lTgZz+cMpzjkHmCwOG3E1ilUZrnINYdqMmrkv30EC3XbRsGlbIOL8H9LaNp5SV4g0pNJDfQ4EdTWWaMvdwyLiQ==}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.1.2
+    dev: true
 
   /@jridgewell/resolve-uri/3.1.0:
     resolution: {integrity: sha512-F2msla3tad+Mfht5cJq7LSXcdudKTWCVYUgw6pLFOOHSTtZlj6SWNYAp+AhuqLmWdBO2X5hPrLcu8cVP8fy28w==}
@@ -924,6 +952,10 @@ packages:
       - sass
       - stylus
       - sugarss
+    dev: true
+
+  /svelte-fa/3.0.3:
+    resolution: {integrity: sha512-GIikJjcVCD+5Y/x9hZc2R4gvuA0gVftacuWu1a+zVQWSFjFYZ+hhU825x+QNs2slsppfrgmFiUyU9Sz9gj4Rdw==}
     dev: true
 
   /svelte-hmr/0.14.12_svelte@3.49.0:
