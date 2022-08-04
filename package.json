@@ -15,6 +15,7 @@
     "@tauri-apps/cli": "^1.0.5",
     "@tsconfig/svelte": "^3.0.0",
     "ghostsui": "^1.4.4",
+    "sass": "^1.54.3",
     "svelte": "^3.49.0",
     "svelte-check": "^2.8.0",
     "svelte-preprocess": "^4.10.7",
