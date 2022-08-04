@@ -32,6 +32,7 @@
         height: fit-content;
 
         display: flex;
+        align-items: stretch;
         gap: 16px;
 
         background-color: var(--background-secondary);
