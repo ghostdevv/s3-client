@@ -23,7 +23,6 @@
         padding: 0px 16px 0px 16px;
 
         background-color: var(--background-secondary);
-        border-right: 2px solid var(--background-tertiary);
 
         display: flex;
         flex-direction: column;

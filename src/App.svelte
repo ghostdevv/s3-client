@@ -30,6 +30,9 @@
     .app {
         grid-area: app;
         padding: 16px;
+
+        border-top: 2px solid var(--background-tertiary);
+        border-left: 2px solid var(--background-tertiary);
     }
 
     .bar-spacer {

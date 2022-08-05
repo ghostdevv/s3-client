@@ -36,7 +36,6 @@
         gap: 16px;
 
         background-color: var(--background-secondary);
-        border-bottom: 2px solid var(--background-tertiary);
 
         .nav-button {
             border-radius: 0px;
