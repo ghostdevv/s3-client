@@ -14,11 +14,12 @@
      */
     "allowJs": true,
     "checkJs": true,
-    "isolatedModules": true,
     "paths": {
       "$lib": ["src/lib"],
       "$lib/*": ["src/lib/*"],
-    }
+    },
+    "importsNotUsedAsValues": "remove",
+    "preserveValueImports": false
   },
   "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"]
 }
