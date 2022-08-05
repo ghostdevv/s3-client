@@ -41,6 +41,9 @@
             border-radius: 0px;
             border: 0px;
 
+            word-wrap: normal;
+            white-space: nowrap;
+
             box-shadow: none;
 
             &.active {
