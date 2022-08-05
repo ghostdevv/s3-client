@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS bucket (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR NOT NULL,
+    bucket TEXT NOT NULL,
+    endpoint TEXT NOT NULL,
+    region TEXT DEFAULT "auto",
+    key_id TEXT NOT NULL,
+    key TEXT NOT NULL
+)
