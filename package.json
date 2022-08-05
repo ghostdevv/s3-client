@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "DEVELOPMENT=1 pnpm taui dev",
+    "dev": "DEVELOPMENT=1 pnpm tauri dev",
     "build": "pnpm tauri build",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
