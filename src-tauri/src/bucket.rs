@@ -2,7 +2,7 @@ use crate::state;
 use sqlx::sqlite::SqliteRow;
 use sqlx::Row;
 
-#[derive(Debug)]
+#[derive(Debug, serde::Serialize, serde::Deserialize)]
 pub struct Bucket {
 	id: i32,
 	name: String,
@@ -28,7 +28,7 @@ impl sqlx::FromRow<'_, SqliteRow> for Bucket {
 }
 
 #[tauri::command]
-pub async fn list_buckets(state: state::TauriAppState<'_>) -> Result<(), String> {
+pub async fn list_buckets(state: state::TauriAppState<'_>) -> Result<Vec<Bucket>, String> {
 	let query = sqlx::query_as("SELECT * FROM bucket");
 
 	let buckets: Vec<Bucket> = match query.fetch_all(&state.db).await {
@@ -36,7 +36,5 @@ pub async fn list_buckets(state: state::TauriAppState<'_>) -> Result<(), String>
 		Err(e) => return Err(format!("Error fetching buckets: {}", e)),
 	};
 
-	println!("{:?}", buckets);
-
-	Ok(())
+	Ok(buckets)
 }
