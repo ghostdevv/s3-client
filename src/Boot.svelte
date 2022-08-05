@@ -10,7 +10,7 @@
         const [bucketsData] = await Promise.all(deps);
 
         $buckets = bucketsData;
-        $selectedBucketId = bucketsData.length > 0 ? bucketsData[0].id : null;
+        $selectedBucketId = null;
     }
 </script>
 
