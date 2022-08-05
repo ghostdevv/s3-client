@@ -1,17 +1,20 @@
 <script lang="ts">
     import { faFile, faGear } from '@fortawesome/free-solid-svg-icons';
+    import { selectedBucket } from '$lib/buckets/buckets';
     import Fa from 'svelte-fa';
 </script>
 
-<div class="sidebar">
-    <button class="nav-button">
-        <Fa icon={faFile} />
-    </button>
+{#if $selectedBucket}
+    <div class="sidebar">
+        <button class="nav-button">
+            <Fa icon={faFile} />
+        </button>
 
-    <button class="nav-button active">
-        <Fa icon={faGear} />
-    </button>
-</div>
+        <button class="nav-button active">
+            <Fa icon={faGear} />
+        </button>
+    </div>
+{/if}
 
 <style lang="scss">
     .sidebar {

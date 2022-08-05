@@ -1,7 +1,7 @@
 <script lang="ts">
+    import { selectedBucket } from '$lib/buckets/buckets';
     import Sidebar from '$lib/sidebar/Sidebar.svelte';
     import Topbar from '$lib/topbar/Topbar.svelte';
-    import { invoke } from '@tauri-apps/api';
 </script>
 
 <main>
@@ -11,9 +11,7 @@
 
     <Topbar />
 
-    <div class="app">
-        <button on:click={() => invoke('list_buckets')}> asd </button>
-    </div>
+    <div class="app" class:sidebar={!!$selectedBucket}>hello world</div>
 </main>
 
 <style lang="scss">
@@ -35,7 +33,10 @@
         padding: 16px;
 
         border-top: 2px solid var(--background-tertiary);
-        border-left: 2px solid var(--background-tertiary);
+
+        &.sidebar {
+            border-left: 2px solid var(--background-tertiary);
+        }
     }
 
     .bar-spacer {

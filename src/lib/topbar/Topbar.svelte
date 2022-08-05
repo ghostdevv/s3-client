@@ -1,27 +1,22 @@
 <script lang="ts">
     import { faPlus, faArchive } from '@fortawesome/free-solid-svg-icons';
+    import { buckets, selectedBucketId } from '$lib/buckets/buckets';
     import Fa from 'svelte-fa';
 </script>
 
 <div class="topbar">
-    <!-- <button class="nav-button">
+    <button class="nav-button">
         <Fa icon={faPlus} />
-    </button> -->
-
-    <button class="nav-button">
-        <Fa icon={faArchive} />
-        <p>My Bucket</p>
     </button>
 
-    <button class="nav-button active">
-        <Fa icon={faArchive} />
-        <p>My Bucket</p>
-    </button>
-
-    <button class="nav-button">
-        <Fa icon={faArchive} />
-        <p>My Bucket</p>
-    </button>
+    {#each $buckets as bucket}
+        <button
+            class="nav-button"
+            on:click={() => ($selectedBucketId = bucket.id)}>
+            <Fa icon={faArchive} />
+            <p>{bucket.name}</p>
+        </button>
+    {/each}
 </div>
 
 <style lang="scss">
