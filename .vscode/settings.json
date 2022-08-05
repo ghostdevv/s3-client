@@ -14,5 +14,9 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features",
         "editor.formatOnSave": true
+    },
+    "[rust]":{
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true
     }
 }
