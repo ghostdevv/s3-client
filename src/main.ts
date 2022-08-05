@@ -1,8 +1,8 @@
-import App from './App.svelte';
+import Boot from './Boot.svelte';
 import 'ghostsui';
 import './app.scss';
 
-const app = new App({
+const app = new Boot({
     target: document.body,
 });
 

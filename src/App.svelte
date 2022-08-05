@@ -1,6 +1,7 @@
 <script lang="ts">
     import Sidebar from '$lib/sidebar/Sidebar.svelte';
     import Topbar from '$lib/topbar/Topbar.svelte';
+    import { invoke } from '@tauri-apps/api';
 </script>
 
 <main>
@@ -10,7 +11,9 @@
 
     <Topbar />
 
-    <div class="app">asddss</div>
+    <div class="app">
+        <button on:click={() => invoke('list_buckets')}> asd </button>
+    </div>
 </main>
 
 <style lang="scss">
