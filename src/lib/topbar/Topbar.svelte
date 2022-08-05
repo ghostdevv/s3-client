@@ -12,6 +12,7 @@
     {#each $buckets as bucket}
         <button
             class="nav-button"
+            class:active={$selectedBucketId == bucket.id}
             on:click={() => ($selectedBucketId = bucket.id)}>
             <Fa icon={faArchive} />
             <p>{bucket.name}</p>
