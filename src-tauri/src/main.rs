@@ -8,6 +8,7 @@ use tauri::generate_handler;
 mod bucket;
 mod db;
 mod paths;
+mod s3;
 mod state;
 
 #[tokio::main]
@@ -22,7 +23,8 @@ async fn main() {
 		.manage(state)
 		.invoke_handler(generate_handler![
 			bucket::list_buckets,
-			bucket::create_bucket
+			bucket::create_bucket,
+			s3::list_bucket_tree
 		])
 		.run(context)
 		.expect("error while running tauri application");

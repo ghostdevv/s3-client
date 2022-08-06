@@ -2,15 +2,15 @@ use crate::state;
 use sqlx::sqlite::SqliteRow;
 use sqlx::Row;
 
-#[derive(Debug, serde::Serialize)]
+#[derive(Debug, serde::Serialize, serde::Deserialize)]
 pub struct Bucket {
-	id: i32,
-	name: String,
-	bucket: String,
-	endpoint: String,
-	region: String,
-	key_id: String,
-	key: String,
+	pub id: i32,
+	pub name: String,
+	pub bucket: String,
+	pub endpoint: String,
+	pub region: String,
+	pub key_id: String,
+	pub key: String,
 }
 
 impl sqlx::FromRow<'_, SqliteRow> for Bucket {
