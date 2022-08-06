@@ -79,8 +79,12 @@
         }
 
         .content {
-            padding-right: 16px;
+            padding: 0px 16px 0px 16px;
             height: 100%;
+
+            max-width: 250px;
+            max-height: 100%;
+            overflow: auto;
         }
 
         .nav-button {
