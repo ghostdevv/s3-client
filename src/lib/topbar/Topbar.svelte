@@ -3,6 +3,9 @@
     import { buckets, selectedBucketId } from '$lib/buckets/buckets';
     import AddBucketModal from './AddBucketModal.svelte';
     import Fa from 'svelte-fa';
+
+    const setActive = (id: number) =>
+        ($selectedBucketId = $selectedBucketId == id ? null : id);
 </script>
 
 <div class="topbar">
@@ -16,7 +19,7 @@
         <button
             class="nav-button"
             class:active={$selectedBucketId == bucket.id}
-            on:click={() => ($selectedBucketId = bucket.id)}>
+            on:click={() => setActive(bucket.id)}>
             <Fa icon={faArchive} />
             <p>{bucket.name}</p>
         </button>
