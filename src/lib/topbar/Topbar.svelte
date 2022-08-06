@@ -45,8 +45,11 @@
 
             box-shadow: none;
 
+            transition: border-color 0.2s ease-in-out;
+            border-bottom: 2px solid transparent;
+
             &.active {
-                border-bottom: 2px solid var(--primary);
+                border-color: var(--primary);
             }
         }
     }
