@@ -23,7 +23,7 @@
 
         const id = await invoke<number>('create_bucket', { bucket });
 
-        $buckets = await invoke<Bucket[]>('list_buckets');
+        $buckets = [...$buckets, { ...bucket, id }];
         $selectedBucketId = id;
 
         disabled = false;
