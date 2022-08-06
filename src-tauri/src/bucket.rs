@@ -2,7 +2,7 @@ use crate::state;
 use sqlx::sqlite::SqliteRow;
 use sqlx::Row;
 
-#[derive(Debug, serde::Serialize, serde::Deserialize)]
+#[derive(Debug, serde::Serialize)]
 pub struct Bucket {
 	id: i32,
 	name: String,
@@ -37,4 +37,41 @@ pub async fn list_buckets(state: state::TauriAppState<'_>) -> Result<Vec<Bucket>
 	};
 
 	Ok(buckets)
+}
+
+#[derive(Debug, serde::Deserialize)]
+pub struct NewBucketData {
+	name: String,
+	bucket: String,
+	endpoint: String,
+	region: String,
+	key_id: String,
+	key: String,
+}
+
+#[tauri::command]
+pub async fn create_bucket(
+	bucket: NewBucketData,
+	state: state::TauriAppState<'_>,
+) -> Result<u32, String> {
+	let query = sqlx::query(
+		"INSERT INTO bucket (name, bucket, endpoint, region, key_id, key) VALUES (?, ?, ?, ?, ?, ?) returning id",
+	)
+	.bind(&bucket.name)
+	.bind(&bucket.bucket)
+	.bind(&bucket.endpoint)
+	.bind(&bucket.region)
+	.bind(&bucket.key_id)
+	.bind(&bucket.key);
+
+	let result = match query.fetch_one(&state.db).await {
+		Ok(result) => result,
+		Err(e) => return Err(format!("Error creating bucket: {}", e)),
+	};
+
+	let id: u32 = result
+		.try_get("id")
+		.expect("Unable to get id from bucket create");
+
+	Ok(id)
 }

@@ -1,13 +1,16 @@
 <script lang="ts">
     import { faPlus, faArchive } from '@fortawesome/free-solid-svg-icons';
     import { buckets, selectedBucketId } from '$lib/buckets/buckets';
+    import AddBucketModal from './AddBucketModal.svelte';
     import Fa from 'svelte-fa';
 </script>
 
 <div class="topbar">
-    <button class="nav-button">
-        <Fa icon={faPlus} />
-    </button>
+    <AddBucketModal>
+        <button slot="activator" class="nav-button">
+            <Fa icon={faPlus} />
+        </button>
+    </AddBucketModal>
 
     {#each $buckets as bucket}
         <button

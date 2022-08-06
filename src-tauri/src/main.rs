@@ -20,7 +20,10 @@ async fn main() {
 
 	tauri::Builder::default()
 		.manage(state)
-		.invoke_handler(generate_handler![bucket::list_buckets])
+		.invoke_handler(generate_handler![
+			bucket::list_buckets,
+			bucket::create_bucket
+		])
 		.run(context)
 		.expect("error while running tauri application");
 }
