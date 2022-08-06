@@ -19,11 +19,17 @@
 {#if $selectedBucket}
     <div class="sidebar">
         <div class="buttons">
-            <button on:click={() => toggle('files')} class="nav-button">
+            <button
+                class:active={selected == 'files'}
+                on:click={() => toggle('files')}
+                class="nav-button">
                 <Fa icon={faFile} />
             </button>
 
-            <button on:click={() => toggle('settings')} class="nav-button">
+            <button
+                class:active={selected == 'settings'}
+                on:click={() => toggle('settings')}
+                class="nav-button">
                 <Fa icon={faGear} />
             </button>
         </div>
