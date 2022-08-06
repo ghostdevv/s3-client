@@ -6,5 +6,6 @@ export const selectedBucketId = writable<number | null>(null);
 
 export const selectedBucket = derived(
     [buckets, selectedBucketId],
-    ([buckets, id]) => (id && buckets.length ? buckets[id] : null),
+    ([buckets, id]) =>
+        id && buckets.length ? buckets.find((bucket) => bucket.id == id) : null,
 );
