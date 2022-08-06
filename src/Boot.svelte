@@ -4,9 +4,8 @@
     import { Bucket } from '$lib/buckets/types';
     import App from './App.svelte';
 
-    const deps = [invoke<Bucket[]>('list_buckets')];
-
     async function start() {
+        const deps = [invoke<Bucket[]>('list_buckets')];
         const [bucketsData] = await Promise.all(deps);
 
         $buckets = bucketsData;
