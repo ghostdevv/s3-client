@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@fortawesome/fontawesome-common-types': ^6.1.2
   '@fortawesome/free-regular-svg-icons': ^6.1.2
   '@fortawesome/free-solid-svg-icons': ^6.1.2
   '@sveltejs/vite-plugin-svelte': ^1.0.1
@@ -25,6 +26,7 @@ dependencies:
   '@tauri-apps/api': 1.0.2
 
 devDependencies:
+  '@fortawesome/fontawesome-common-types': 6.1.2
   '@fortawesome/free-regular-svg-icons': 6.1.2
   '@fortawesome/free-solid-svg-icons': 6.1.2
   '@sveltejs/vite-plugin-svelte': 1.0.1_svelte@3.49.0+vite@3.0.4

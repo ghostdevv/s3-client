@@ -1,42 +1,52 @@
 <script lang="ts">
+    import type { IconDefinition } from '@fortawesome/fontawesome-common-types';
     import { faFile, faGear } from '@fortawesome/free-solid-svg-icons';
     import { selectedBucket } from '$lib/buckets/buckets';
     import Settings from './options/Settings.svelte';
+    import type { SvelteComponent } from 'svelte';
     import Files from './options/Files.svelte';
     import Fa from 'svelte-fa';
 
-    const manifest = {
-        files: Files,
-        settings: Settings,
+    type Manfiest<Keys extends string> = {
+        [P in Keys]: {
+            icon: IconDefinition;
+            component: typeof SvelteComponent;
+        };
+    };
+
+    const manifest: Manfiest<'files' | 'settings'> = {
+        files: {
+            icon: faFile,
+            component: Files,
+        },
+        settings: {
+            icon: faGear,
+            component: Settings,
+        },
     };
 
     let selected: keyof typeof manifest | null;
 
-    const toggle = (item: keyof typeof manifest) =>
-        (selected = selected == item ? null : item);
+    const toggle = (item: string) =>
+        (selected = selected == item ? null : (item as keyof typeof manifest));
 </script>
 
 {#if $selectedBucket}
     <div class="sidebar">
         <div class="buttons">
-            <button
-                class:active={selected == 'files'}
-                on:click={() => toggle('files')}
-                class="nav-button">
-                <Fa icon={faFile} />
-            </button>
-
-            <button
-                class:active={selected == 'settings'}
-                on:click={() => toggle('settings')}
-                class="nav-button">
-                <Fa icon={faGear} />
-            </button>
+            {#each Object.entries(manifest) as [key, { icon }]}
+                <button
+                    class:active={selected == key}
+                    on:click={() => toggle(key)}
+                    class="nav-button">
+                    <Fa {icon} />
+                </button>
+            {/each}
         </div>
 
         {#if selected}
             <div class="content">
-                <svelte:component this={manifest[selected]} />
+                <svelte:component this={manifest[selected].component} />
             </div>
         {/if}
     </div>

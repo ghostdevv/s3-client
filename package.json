@@ -11,6 +11,7 @@
     "tauri": "tauri"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-common-types": "^6.1.2",
     "@fortawesome/free-regular-svg-icons": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@sveltejs/vite-plugin-svelte": "^1.0.1",
