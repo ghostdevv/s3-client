@@ -11,7 +11,7 @@
 
     <Topbar />
 
-    <div class="app" class:sidebar={!!$selectedBucket}>hello world</div>
+    <div class="app" class:sidebar={!!$selectedBucket} />
 </main>
 
 <style lang="scss">
