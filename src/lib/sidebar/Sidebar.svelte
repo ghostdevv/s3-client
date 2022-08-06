@@ -27,8 +27,8 @@
 
     let selected: keyof typeof manifest | null;
 
-    // Close the sidebar when the user changes their bucket selection
-    $: if ($selectedBucketId) {
+    // Close the sidebar when the user changes their bucket selection to no buckets
+    $: if ($selectedBucketId == null) {
         selected = null;
     }
 
