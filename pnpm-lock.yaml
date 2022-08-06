@@ -9,6 +9,7 @@ specifiers:
   '@tauri-apps/cli': ^1.0.5
   '@tsconfig/svelte': ^3.0.0
   ghostsui: ^1.4.4
+  path-list-to-tree: ^1.1.1
   polykit: ^0.2.0
   prettier: ^2.7.1
   prettier-plugin-svelte: ^2.7.0
@@ -33,6 +34,7 @@ devDependencies:
   '@tauri-apps/cli': 1.0.5
   '@tsconfig/svelte': 3.0.0
   ghostsui: 1.4.4
+  path-list-to-tree: 1.1.1
   polykit: 0.2.0
   prettier: 2.7.1
   prettier-plugin-svelte: 2.7.0_o3ioganyptcsrh6x4hnxvjkpqi
@@ -1083,6 +1085,10 @@ packages:
   /path-is-absolute/1.0.1:
     resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /path-list-to-tree/1.1.1:
+    resolution: {integrity: sha512-yc5cIiQmOymJ5ewheH105A9I3No+6PBYlihsihun0iMctClKz6/GdZZW1EbEEo86fUa8aG9tjwpOELbXvTlvYw==}
     dev: true
 
   /path-parse/1.0.7:

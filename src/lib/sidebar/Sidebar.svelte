@@ -2,9 +2,9 @@
     import type { IconDefinition } from '@fortawesome/fontawesome-common-types';
     import { faFile, faGear } from '@fortawesome/free-solid-svg-icons';
     import { selectedBucket, selectedBucketId } from '$lib/buckets/buckets';
+    import Files from './options/files/Files.svelte';
     import Settings from './options/Settings.svelte';
     import type { SvelteComponent } from 'svelte';
-    import Files from './options/Files.svelte';
     import Fa from 'svelte-fa';
 
     type Manfiest<Keys extends string> = {
@@ -82,6 +82,7 @@
             padding: 0px 16px 0px 16px;
             height: 100%;
 
+            width: 250px;
             max-width: 250px;
             max-height: 100%;
             overflow: auto;
