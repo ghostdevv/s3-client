@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { IconDefinition } from '@fortawesome/fontawesome-common-types';
     import { faFile, faGear } from '@fortawesome/free-solid-svg-icons';
-    import { selectedBucket } from '$lib/buckets/buckets';
+    import { selectedBucket, selectedBucketId } from '$lib/buckets/buckets';
     import Settings from './options/Settings.svelte';
     import type { SvelteComponent } from 'svelte';
     import Files from './options/Files.svelte';
@@ -26,6 +26,11 @@
     };
 
     let selected: keyof typeof manifest | null;
+
+    // Close the sidebar when the user changes their bucket selection
+    $: if ($selectedBucketId) {
+        selected = null;
+    }
 
     const toggle = (item: string) =>
         (selected = selected == item ? null : (item as keyof typeof manifest));
