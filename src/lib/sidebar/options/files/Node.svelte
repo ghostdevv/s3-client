@@ -32,5 +32,9 @@
         &.selected {
             background-color: var(--background-tertiary);
         }
+
+        &.selected {
+            border-right: 2px solid var(--primary);
+        }
     }
 </style>
