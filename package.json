@@ -17,6 +17,7 @@
     "@leveluptuts/svelte-side-menu": "^1.0.5",
     "@leveluptuts/svelte-toy": "^2.0.3",
     "@sveltejs/vite-plugin-svelte": "^1.0.9",
+    "@tauri-apps/api": "^1.1.0",
     "@tauri-apps/cli": "^1.1.1",
     "@tsconfig/svelte": "^3.0.0",
     "ghostsui": "^1.5.0",
@@ -33,8 +34,5 @@
     "typescript": "^4.8.4",
     "vite": "^3.1.8",
     "vite-plugin-terminal": "^1.0.2"
-  },
-  "dependencies": {
-    "@tauri-apps/api": "^1.1.0"
   }
 }

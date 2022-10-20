@@ -25,9 +25,6 @@ specifiers:
   vite: ^3.1.8
   vite-plugin-terminal: ^1.0.2
 
-dependencies:
-  '@tauri-apps/api': 1.1.0
-
 devDependencies:
   '@fortawesome/fontawesome-common-types': 6.2.0
   '@fortawesome/free-regular-svg-icons': 6.2.0
@@ -35,6 +32,7 @@ devDependencies:
   '@leveluptuts/svelte-side-menu': 1.0.5
   '@leveluptuts/svelte-toy': 2.0.3
   '@sveltejs/vite-plugin-svelte': 1.0.9_svelte@3.52.0+vite@3.1.8
+  '@tauri-apps/api': 1.1.0
   '@tauri-apps/cli': 1.1.1
   '@tsconfig/svelte': 3.0.0
   ghostsui: 1.5.0
@@ -341,7 +339,7 @@ packages:
   /@tauri-apps/api/1.1.0:
     resolution: {integrity: sha512-n13pIqdPd3KtaMmmAcrU7BTfdMtIlGNnfZD0dNX8L4p8dgmuNyikm6JAA+yCpl9gqq6I8x5cV2Y0muqdgD0cWw==}
     engines: {node: '>= 12.22.0', npm: '>= 6.6.0', yarn: '>= 1.19.1'}
-    dev: false
+    dev: true
 
   /@tauri-apps/cli-darwin-arm64/1.1.1:
     resolution: {integrity: sha512-qBG11ig525/qf0f5OQxn0ON3hT8YdpTfpa4Y4kVqBJhdW50R5fadPv6tv5Dpl2TS2X7nWh/zg5mEXYoCK3HZ9w==}
