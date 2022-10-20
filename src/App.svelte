@@ -1,13 +1,22 @@
 <script lang="ts">
-    import { selectedBucket, selectedFile } from '$lib/state';
+    import {
+        buckets,
+        selectedBucket,
+        selectedBucketId,
+        selectedFile,
+    } from '$lib/state';
+
     import Sidebar from '$lib/sidebar/Sidebar.svelte';
     import Topbar from '$lib/topbar/Topbar.svelte';
+    import { Toy } from '@leveluptuts/svelte-toy';
 
     // Hook for selectedBucket change
     $: if ($selectedBucket) {
         $selectedFile = null;
     }
 </script>
+
+<Toy register={{ selectedFile, selectedBucket, buckets, selectedBucketId }} />
 
 <main>
     <div class="bar-spacer" />
@@ -16,7 +25,7 @@
 
     <Topbar />
 
-    <div class="app" class:sidebar={!!$selectedBucket} />
+    <div class="preview" class:sidebar={!!$selectedBucket} />
 </main>
 
 <style lang="scss">
@@ -29,12 +38,12 @@
         grid-template-rows: max-content 1fr;
         grid-template-areas:
             'bar-spacer topbar'
-            'sidebar app'
-            'sidebar app';
+            'sidebar preview'
+            'sidebar preview';
     }
 
-    .app {
-        grid-area: app;
+    .preview {
+        grid-area: preview;
         padding: 16px;
 
         border-top: 2px solid var(--background-tertiary);

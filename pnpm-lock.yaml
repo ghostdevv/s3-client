@@ -4,6 +4,8 @@ specifiers:
   '@fortawesome/fontawesome-common-types': ^6.1.2
   '@fortawesome/free-regular-svg-icons': ^6.1.2
   '@fortawesome/free-solid-svg-icons': ^6.1.2
+  '@leveluptuts/svelte-side-menu': ^1.0.5
+  '@leveluptuts/svelte-toy': ^2.0.3
   '@sveltejs/vite-plugin-svelte': ^1.0.1
   '@tauri-apps/api': ^1.0.2
   '@tauri-apps/cli': ^1.0.5
@@ -30,6 +32,8 @@ devDependencies:
   '@fortawesome/fontawesome-common-types': 6.1.2
   '@fortawesome/free-regular-svg-icons': 6.1.2
   '@fortawesome/free-solid-svg-icons': 6.1.2
+  '@leveluptuts/svelte-side-menu': 1.0.5
+  '@leveluptuts/svelte-toy': 2.0.3
   '@sveltejs/vite-plugin-svelte': 1.0.1_svelte@3.49.0+vite@3.0.4
   '@tauri-apps/cli': 1.0.5
   '@tsconfig/svelte': 3.0.0
@@ -46,7 +50,7 @@ devDependencies:
   tslib: 2.4.0
   typescript: 4.7.4
   vite: 3.0.4_sass@1.54.3
-  vite-plugin-terminal: 1.0.1_vite@3.0.4
+  vite-plugin-terminal: 1.0.2_vite@3.0.4
 
 packages:
 
@@ -236,6 +240,16 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+    dev: true
+
+  /@leveluptuts/svelte-side-menu/1.0.5:
+    resolution: {integrity: sha512-czPmr0LEjVhr7qXYZtH4PrUrfHPYg9nS7ZHH+xDINKoajkERWlHlsBtdoJC5ZTMzGvdhLCLfF70q4xeMzJgS7w==}
+    dev: true
+
+  /@leveluptuts/svelte-toy/2.0.3:
+    resolution: {integrity: sha512-A2pjSG4UQbWLffD3r3cC8zaNwtTmBoNJJ2TIlNzVtdlUXk1xrYtscMopB+N2ztHnfjlKWyIee4TEnF3OBVwIfQ==}
+    dependencies:
+      lodash.set: 4.3.2
     dev: true
 
   /@nodelib/fs.scandir/2.1.5:
@@ -986,6 +1000,10 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
+  /lodash.set/4.3.2:
+    resolution: {integrity: sha512-4hNPN5jlm/N/HLMCO43v8BXKq9Z7QdAGc/VGrRD61w8gN9g/6jF9A4L1pbUgBLCffi0w9VsXfTOij5x8iTyFvg==}
+    dev: true
+
   /magic-string/0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
     dependencies:
@@ -1427,8 +1445,8 @@ packages:
     resolution: {integrity: sha512-IT3q0lPvtkqQ8toHQN/BkOi4VIqoqheqM1FnkNWT9y0G8B3xJhwnoKBu5OHx8zHDOvveQzfKuFowJ0VSARiIDg==}
     dev: true
 
-  /vite-plugin-terminal/1.0.1_vite@3.0.4:
-    resolution: {integrity: sha512-8DnTEKkRGA/HhPk0IeZzNRAqIedjjfSry4BCi9qghr5A0gS4rCPNfNqC8a2qr2e4y1JKYoE9FupQyg7DZVnVHw==}
+  /vite-plugin-terminal/1.0.2_vite@3.0.4:
+    resolution: {integrity: sha512-0WUhqpMNakyFL6LFeGOOJHUBqF4fXsiPDiBl9BWnKXn3igEjtObaxh1ZxK8mT3iG94xmW/1TucRsRr8rsR8clg==}
     engines: {node: '>=14'}
     peerDependencies:
       vite: ^2.0.0

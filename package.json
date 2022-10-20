@@ -14,6 +14,8 @@
     "@fortawesome/fontawesome-common-types": "^6.1.2",
     "@fortawesome/free-regular-svg-icons": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@leveluptuts/svelte-side-menu": "^1.0.5",
+    "@leveluptuts/svelte-toy": "^2.0.3",
     "@sveltejs/vite-plugin-svelte": "^1.0.1",
     "@tauri-apps/cli": "^1.0.5",
     "@tsconfig/svelte": "^3.0.0",
