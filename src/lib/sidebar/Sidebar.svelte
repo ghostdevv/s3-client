@@ -2,8 +2,8 @@
     import type { IconDefinition } from '@fortawesome/fontawesome-common-types';
     import { faFile, faGear } from '@fortawesome/free-solid-svg-icons';
     import { selectedBucket, selectedBucketId } from '$lib/state';
+    import Settings from './options/settings/Settings.svelte';
     import Files from './options/files/Files.svelte';
-    import Settings from './options/Settings.svelte';
     import type { SvelteComponent } from 'svelte';
     import Fa from 'svelte-fa';
 
