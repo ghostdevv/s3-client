@@ -6,10 +6,7 @@
     import toTree from 'path-list-to-tree';
 
     async function load(bucket: Bucket) {
-        const paths: string[] = await invoke('list_bucket_tree', {
-            bucket: $selectedBucket,
-        });
-
+        const paths: string[] = await invoke('list_bucket_tree', { bucket });
         return toTree(paths);
     }
 
