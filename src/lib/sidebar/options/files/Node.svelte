@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { TreeNode } from 'path-list-to-tree';
+    import type { TreeNode } from './utils';
     import Folder from './Folder.svelte';
 
     export let node: TreeNode;

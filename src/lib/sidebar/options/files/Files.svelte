@@ -2,12 +2,12 @@
     import { invoke } from '@tauri-apps/api/tauri';
     import { selectedBucket } from '$lib/state';
     import { Bucket } from '$lib/buckets/types';
-    import toTree from 'path-list-to-tree';
     import Node from './Node.svelte';
+    import { tree } from './utils';
 
     async function load(bucket: Bucket) {
         const paths: string[] = await invoke('list_bucket_tree', { bucket });
-        return toTree(paths);
+        return tree(paths);
     }
 
     $: promise = load($selectedBucket);

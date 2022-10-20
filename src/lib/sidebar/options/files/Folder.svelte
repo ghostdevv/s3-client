@@ -1,6 +1,6 @@
 <script lang="ts">
     import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-    import { TreeNode } from 'path-list-to-tree';
+    import type { TreeNode } from './utils';
     import Node from './Node.svelte';
     import Fa from 'svelte-fa';
 
