@@ -17,8 +17,8 @@
 
     {#if open}
         <div class="children">
-            {#each node.children as node}
-                <RenderNode {node} />
+            {#each node.children as newNode}
+                <RenderNode node={newNode} />
             {/each}
         </div>
     {/if}
