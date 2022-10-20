@@ -9,7 +9,7 @@ function patchNode(node: BaseTreeNode, parentPathSegments: string[]): TreeNode {
     const pathSegments = [...parentPathSegments, node.name];
 
     return {
-        path: pathSegments.join('/'),
+        path: `/${pathSegments.join('/')}`,
         name: node.name,
         children: node.children.map((child) => patchNode(child, pathSegments)),
     };
