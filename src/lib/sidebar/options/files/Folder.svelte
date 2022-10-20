@@ -1,7 +1,7 @@
 <script lang="ts">
     import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
     import { TreeNode } from 'path-list-to-tree';
-    import RenderNode from './RenderNode.svelte';
+    import Node from './Node.svelte';
     import Fa from 'svelte-fa';
 
     export let node: TreeNode;
@@ -18,7 +18,7 @@
     {#if open}
         <div class="children">
             {#each node.children as newNode}
-                <RenderNode node={newNode} />
+                <Node node={newNode} />
             {/each}
         </div>
     {/if}

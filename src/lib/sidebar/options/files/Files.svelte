@@ -1,9 +1,9 @@
 <script lang="ts">
-    import { selectedBucket } from '$lib/state';
     import { invoke } from '@tauri-apps/api/tauri';
-    import RenderNode from './RenderNode.svelte';
+    import { selectedBucket } from '$lib/state';
     import { Bucket } from '$lib/buckets/types';
     import toTree from 'path-list-to-tree';
+    import Node from './Node.svelte';
 
     async function load(bucket: Bucket) {
         const paths: string[] = await invoke('list_bucket_tree', { bucket });
@@ -17,6 +17,6 @@
     Loading...
 {:then nodes}
     {#each nodes as node}
-        <RenderNode {node} />
+        <Node {node} />
     {/each}
 {/await}
