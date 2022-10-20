@@ -24,7 +24,8 @@ async fn main() {
 		.invoke_handler(generate_handler![
 			bucket::list_buckets,
 			bucket::create_bucket,
-			s3::list_bucket_tree
+			s3::list_bucket_tree,
+			s3::get_file_meta
 		])
 		.run(context)
 		.expect("error while running tauri application");

@@ -1,5 +1,6 @@
 <script lang="ts">
     import { selectedBucket, selectedFile } from '$lib/state';
+    import Preview from '$lib/preview/Preview.svelte';
     import Sidebar from '$lib/sidebar/Sidebar.svelte';
     import Topbar from '$lib/topbar/Topbar.svelte';
     import Dev from '$lib/Dev.svelte';
@@ -14,12 +15,9 @@
 
 <main>
     <div class="bar-spacer" />
-
     <Sidebar />
-
     <Topbar />
-
-    <div class="preview" class:sidebar={!!$selectedBucket} />
+    <Preview />
 </main>
 
 <style lang="scss">
@@ -34,17 +32,6 @@
             'bar-spacer topbar'
             'sidebar preview'
             'sidebar preview';
-    }
-
-    .preview {
-        grid-area: preview;
-        padding: 16px;
-
-        border-top: 2px solid var(--background-tertiary);
-
-        &.sidebar {
-            border-left: 2px solid var(--background-tertiary);
-        }
     }
 
     .bar-spacer {

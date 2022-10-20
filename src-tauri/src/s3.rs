@@ -38,3 +38,24 @@ pub async fn list_bucket_tree(bucket: bucket::Bucket) -> Vec<String> {
 
 	return paths;
 }
+
+#[derive(Debug, serde::Serialize)]
+pub struct FileMeta {
+	size: i64,
+}
+
+#[tauri::command]
+pub async fn get_file_meta(bucket: bucket::Bucket, file: String) -> Result<FileMeta, String> {
+	let creds = resolve_bucket(&bucket).await;
+	let result = creds.head_object(&file).await;
+
+	if result.is_err() {
+		return Err(String::from("Failed to get file meta"));
+	}
+
+	let (result, _code) = result.unwrap();
+
+	Ok(FileMeta {
+		size: result.content_length.unwrap(),
+	})
+}

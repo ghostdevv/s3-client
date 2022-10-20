@@ -7,3 +7,7 @@ export interface Bucket {
     key_id: string;
     key: string;
 }
+
+export interface FileMeta {
+    size: number;
+}
