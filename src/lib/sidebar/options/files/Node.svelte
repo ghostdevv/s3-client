@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { selectedFile } from '$lib/state';
     import type { TreeNode } from './utils';
     import Folder from './Folder.svelte';
 
@@ -8,7 +9,10 @@
 {#if node.children.length}
     <Folder {node} />
 {:else}
-    <div class="item">
+    <div
+        class="item"
+        on:click={() => ($selectedFile = node.path)}
+        class:selected={$selectedFile == node.path}>
         <p>{node.name}</p>
     </div>
 {/if}
@@ -24,7 +28,8 @@
         cursor: pointer;
 
         &:hover:not(.children:hover),
-        &:focus:not(.children:focus) {
+        &:focus:not(.children:focus),
+        &.selected {
             background-color: var(--background-tertiary);
         }
     }

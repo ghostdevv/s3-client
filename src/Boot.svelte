@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { buckets, selectedBucketId } from '$lib/state';
+    import { buckets, selectedBucketId, selectedFile } from '$lib/state';
     import { invoke } from '@tauri-apps/api/tauri';
     import { Bucket } from '$lib/buckets/types';
     import App from './App.svelte';
@@ -10,6 +10,7 @@
 
         $buckets = bucketsData;
         $selectedBucketId = null;
+        $selectedFile = null;
     }
 </script>
 

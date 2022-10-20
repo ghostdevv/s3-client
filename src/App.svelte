@@ -1,7 +1,12 @@
 <script lang="ts">
+    import { selectedBucket, selectedFile } from '$lib/state';
     import Sidebar from '$lib/sidebar/Sidebar.svelte';
     import Topbar from '$lib/topbar/Topbar.svelte';
-    import { selectedBucket } from '$lib/state';
+
+    // Hook for selectedBucket change
+    $: if ($selectedBucket) {
+        $selectedFile = null;
+    }
 </script>
 
 <main>
