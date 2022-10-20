@@ -1,14 +1,8 @@
 <script lang="ts">
-    import {
-        buckets,
-        selectedBucket,
-        selectedBucketId,
-        selectedFile,
-    } from '$lib/state';
-
+    import { selectedBucket, selectedFile } from '$lib/state';
     import Sidebar from '$lib/sidebar/Sidebar.svelte';
     import Topbar from '$lib/topbar/Topbar.svelte';
-    import { Toy } from '@leveluptuts/svelte-toy';
+    import Dev from '$lib/Dev.svelte';
 
     // Hook for selectedBucket change
     $: if ($selectedBucket) {
@@ -16,7 +10,7 @@
     }
 </script>
 
-<Toy register={{ selectedFile, selectedBucket, buckets, selectedBucketId }} />
+<Dev />
 
 <main>
     <div class="bar-spacer" />
