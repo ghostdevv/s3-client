@@ -1,5 +1,5 @@
 import { derived, writable } from 'svelte/store';
-import type { Bucket } from './types';
+import type { Bucket } from './buckets/types';
 
 export const buckets = writable<Bucket[]>([]);
 export const selectedBucketId = writable<number | null>(null);

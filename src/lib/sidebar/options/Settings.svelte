@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { selectedBucket } from '$lib/buckets/buckets';
+    import { selectedBucket } from '$lib/state';
 
     $: bucket = $selectedBucket;
 </script>

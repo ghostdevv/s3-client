@@ -1,6 +1,6 @@
 <script lang="ts">
     import { faPlus, faArchive } from '@fortawesome/free-solid-svg-icons';
-    import { buckets, selectedBucketId } from '$lib/buckets/buckets';
+    import { buckets, selectedBucketId } from '$lib/state';
     import AddBucketModal from './AddBucketModal.svelte';
     import Fa from 'svelte-fa';
 

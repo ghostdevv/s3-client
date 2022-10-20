@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { IconDefinition } from '@fortawesome/fontawesome-common-types';
     import { faFile, faGear } from '@fortawesome/free-solid-svg-icons';
-    import { selectedBucket, selectedBucketId } from '$lib/buckets/buckets';
+    import { selectedBucket, selectedBucketId } from '$lib/state';
     import Files from './options/files/Files.svelte';
     import Settings from './options/Settings.svelte';
     import type { SvelteComponent } from 'svelte';

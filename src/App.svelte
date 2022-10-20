@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { selectedBucket } from '$lib/buckets/buckets';
     import Sidebar from '$lib/sidebar/Sidebar.svelte';
     import Topbar from '$lib/topbar/Topbar.svelte';
+    import { selectedBucket } from '$lib/state';
 </script>
 
 <main>

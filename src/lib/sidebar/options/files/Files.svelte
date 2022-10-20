@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { selectedBucket } from '$lib/buckets/buckets';
+    import { selectedBucket } from '$lib/state';
     import { invoke } from '@tauri-apps/api/tauri';
     import RenderNode from './RenderNode.svelte';
     import { Bucket } from '$lib/buckets/types';
