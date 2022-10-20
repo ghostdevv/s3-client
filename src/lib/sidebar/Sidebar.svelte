@@ -25,11 +25,11 @@
         },
     };
 
-    let selected: keyof typeof manifest | null;
+    let selected: keyof typeof manifest | null = null;
 
     // Close the sidebar when the user changes their bucket selection to no buckets
-    $: if ($selectedBucketId == null) {
-        selected = null;
+    $: if ($selectedBucketId) {
+        selected = $selectedBucketId ? 'files' : null;
     }
 
     const toggle = (item: string) =>
