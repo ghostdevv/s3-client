@@ -19,4 +19,12 @@
     {#each nodes as node}
         <Node {node} />
     {/each}
+{:catch error}
+    <p class="error">{error}</p>
 {/await}
+
+<style lang="scss">
+    .error {
+        color: var(--red);
+    }
+</style>

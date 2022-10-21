@@ -14,17 +14,18 @@ async fn resolve_bucket(bucket: &bucket::Bucket) -> Bucket {
 }
 
 #[tauri::command]
-pub async fn list_bucket_tree(bucket: bucket::Bucket) -> Vec<String> {
+pub async fn list_bucket_tree(bucket: bucket::Bucket) -> Result<Vec<String>, String> {
 	let creds = resolve_bucket(&bucket).await;
 
-	let objects = creds
-		.list(String::default(), Some(String::default()))
-		.await
-		.expect("Error listing objects");
+	let objects = creds.list(String::default(), Some(String::default())).await;
+
+	if objects.is_err() {
+		return Err(format!("Failed to list bucket: {:?}", objects));
+	}
 
 	let mut paths: Vec<String> = vec![];
 
-	for object in objects {
+	for object in objects.unwrap() {
 		let formatted = object
 			.contents
 			.iter()
@@ -36,7 +37,7 @@ pub async fn list_bucket_tree(bucket: bucket::Bucket) -> Vec<String> {
 		}
 	}
 
-	return paths;
+	Ok(paths)
 }
 
 #[derive(Debug, serde::Serialize)]
